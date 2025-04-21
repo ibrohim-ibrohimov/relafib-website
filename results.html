@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RELAFIB – Результаты</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="main-header">
+    <h1 class="brand-name" data-lang="ru">RELAFIB</h1>
+    <h1 class="brand-name hidden" data-lang="uz">RELAFIB</h1>
+    <div class="top-right">
+      <div class="lang-switcher">
+        <button onclick="switchLanguage('ru')">РУ</button>
+        <button onclick="switchLanguage('uz')">UZ</button>
+      </div>
+    </div>
+    <button class="mobile-toggle" onclick="toggleMenu()">☰</button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html" data-lang="ru">Главная</a><a href="index.html" data-lang="uz" class="hidden">Bosh sahifa</a></li>
+        <li><a href="about.html" data-lang="ru">О продукте</a><a href="about.html" data-lang="uz" class="hidden">Mahsulot haqida</a></li>
+        <li><a href="composition.html" data-lang="ru">Состав</a><a href="composition.html" data-lang="uz" class="hidden">Tarkibi</a></li>
+        <li><a href="usage.html" data-lang="ru">Применение</a><a href="usage.html" data-lang="uz" class="hidden">Qo‘llash</a></li>
+        <li><a href="results.html" data-lang="ru">Результаты</a><a href="results.html" data-lang="uz" class="hidden">Natijalar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+ <main class="info-section">
+  <h2 data-lang="ru">Результаты</h2>
+  <h2 data-lang="uz" class="hidden">Natijalar</h2>
+
+  <!-- First Image Section -->
+  <section class="result-section">
+    <h3 data-lang="ru">Воздействие на кожные раны</h3>
+    <h3 data-lang="uz" class="hidden">Teridagi yaraga ta’siri</h3>
+    <div class="image-gallery">
+      <img src="images/14.png" alt="Before - After">
+      <img src="images/15.png" alt="Before - After">
+    </div>
+  </section>
+
+  <!-- Second Image Section -->
+  <section class="result-section">
+    <h3 data-lang="ru">Воздействие на обожжённую кожу</h3>
+    <h3 data-lang="uz" class="hidden">Kuygan teridagi natija</h3>
+    <div class="image-gallery">
+      <img src="images/5.png" alt="Before - After">
+      <img src="images/6.png" alt="Before - After">
+      <img src="images/7.png" alt="Before - After">
+      <img src="images/8.png" alt="Before - After">
+      <img src="images/12.png" alt="Before - After">
+      <img src="images/17.png" alt="Before - After">
+    </div>
+  </section>
+
+  <!-- Third Image Section -->
+  <section class="result-section">
+    <h3 data-lang="ru">Воздействие на открытую рану</h3>
+    <h3 data-lang="uz" class="hidden">Ochik jarohatdagi natija</h3>
+    <div class="image-gallery">
+      <img src="images/3.png" alt="Before - After">
+      <img src="images/4.png" alt="Before - After">
+    </div>
+  </section>
+
+  <!-- Fourth Image Section -->
+  <section class="result-section">
+    <h3 data-lang="ru">Воздействие на рану при сахарном диабете</h3>
+    <h3 data-lang="uz" class="hidden">Qandli diabetdan keyingi yaradagi natija</h3>
+    <div class="image-gallery">
+      <img src="images/18.png" alt="Before - After">
+    </div>
+  </section>
+
+  <!-- Fifth Image Section -->
+  <section class="result-section">
+    <h3 data-lang="ru">Воздействие на раны после ампутации</h3>
+    <h3 data-lang="uz" class="hidden">Amputatsiyadan keyingi jarohatdagi natija</h3>
+    <div class="image-gallery">
+      <img src="images/1.png" alt="Before - After">
+      <img src="images/2.png" alt="Before - After">
+      <img src="images/16.png" alt="Before - After">
+    </div>
+  </section>
+
+  <!-- Sixth Image Section -->
+  <section class="result-section">
+    <h3 data-lang="ru">Воздействие на стрии на коже</h3>
+    <h3 data-lang="uz" class="hidden">Teridagi striyaga ta’siri</h3>
+    <div class="image-gallery">
+      <img src="images/13.png" alt="Before - After">
+    </div>
+  </section>
+
+  <!-- Seventh Image Section -->
+  <section class="result-section">
+    <h3 data-lang="ru">Реабилитация после операции</h3>
+    <h3 data-lang="uz" class="hidden">Jarohlik amaliyotidan keyingi tiklanish</h3>
+    <div class="image-gallery">
+      <img src="images/10.png" alt="Before - After">
+    </div>
+  </section>
+
+  <!-- Eighth Image Section -->
+  <section class="result-section">
+    <h3 data-lang="ru">Воздействие на пролежни</h3>
+    <h3 data-lang="uz" class="hidden">Yotoq yaraga ta'siri</h3>
+    <div class="image-gallery">
+      <img src="images/11.png" alt="Before - After">
+    </div>
+  </section>  
+
+</main>
+
+  <footer>
+    <div class="footer-social">
+      <a href="https://instagram.com/relafib.uz" target="_blank">
+        <img src="images/instagram-icon.png" alt="Instagram"><span>@relafib.uz</span>
+      </a>
+      <a href="https://t.me/relafib" target="_blank">
+        <img src="images/telegram-icon.png" alt="Telegram"><span>t.me/relafib</span>
+      </a>
+    </div>
+  </footer>
+
+ <script>
+    function toggleMenu() { document.querySelector('.main-nav').classList.toggle('open'); }
+    function switchLanguage(lang) {
+      localStorage.setItem('lang', lang);
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.classList.toggle('hidden', el.getAttribute('data-lang') !== lang);
+      });
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      switchLanguage(localStorage.getItem('lang') || 'ru');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>RELAFIB – Применение</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="main-header">
+    <h1 class="brand-name" data-lang="ru">RELAFIB</h1>
+    <h1 class="brand-name hidden" data-lang="uz">RELAFIB</h1>
+    <div class="top-right">
+      <div class="lang-switcher">
+        <button onclick="switchLanguage('ru')">РУ</button>
+        <button onclick="switchLanguage('uz')">UZ</button>
+      </div>
+    </div>
+    <button class="mobile-toggle" onclick="toggleMenu()">☰</button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html" data-lang="ru">Главная</a><a href="index.html" data-lang="uz" class="hidden">Bosh sahifa</a></li>
+        <li><a href="about.html" data-lang="ru">О продукте</a><a href="about.html" data-lang="uz" class="hidden">Mahsulot haqida</a></li>
+        <li><a href="composition.html" data-lang="ru">Состав</a><a href="composition.html" data-lang="uz" class="hidden">Tarkibi</a></li>
+        <li><a href="usage.html" data-lang="ru">Применение</a><a href="usage.html" data-lang="uz" class="hidden">Qo‘llash</a></li>
+        <li><a href="results.html" data-lang="ru">Результаты</a><a href="results.html" data-lang="uz" class="hidden">Natijalar</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="info-section">
+    <h2 data-lang="ru">Применение</h2>
+    <h2 data-lang="uz" class="hidden">Qo‘llash</h2>
+    <p data-lang="ru">
+      <strong>Торговое название:</strong>«РЕЛАФИБ»;<br>
+      <strong>Форма выпуска:</strong>Светозащитные стеклянные флаконы по 50 мл, укупоренные крышками для флаконов с капельницами, в картонной пачке. 1 флакон вместе с инструкцией применению в картонной пачке.<br>
+      <strong>Способ применения:</strong> наносить каплями, 2-3 раза в день на поврежденную поверхность кожи.<br>
+      <strong>Условия хранения:</strong> Хранить в оригинальной упаковке при температуре не выше 25 °С. Не замораживать! Хранить в недоступном для детей месте.<br>
+      <strong>Срок годности:</strong> 2 года; Не применять после окончания срока годности, указанного на упаковке.<br>
+      <strong>Сделано в Южной Корее.</strong>
+    </p>
+    <p data-lang="uz" class="hidden">
+      <strong>Tijorat nomi:</strong> «RELAFIB»;<br>
+      <strong>Chiqarish shakli:</strong> 50 ml hajmli yorug'likdan himoya qiluvchi shisha idish, tomchilagich, shisha usti qopqoq bilan yopilgan, karton qutiga solingan. 1 shisha foydalanish bo'yicha ko'rsatmalar bilan birga karton qutida. <br>
+      <strong>Qo'llash bo'yicha ko'rsatmalar:</strong> kuniga 2-3 marta shikastlangan teriga va yaralarga tomiziladi.<br>
+      <strong>Saqlash shartlari:</strong> Asl o‘ramda 25 °C dan yuqori bo‘lmagan haroratda saqlang. Muzlatmang! Bolalar qo'li etmaydigan joyda saqlang.<br>
+      <strong>Yaroqlilik muddati:</strong> 2 yil; Qutida ko'rsatilgan yaroqlilik muddati o'tganidan keyin foydalanmang.<br>
+      <strong>Janubiy Koreya mahsuloti.</strong>
+  </main>
+
+  <footer>
+    <div class="footer-social">
+      <a href="https://instagram.com/relafib.uz" target="_blank">
+        <img src="images/instagram-icon.png" alt="Instagram"><span>@relafib.uz</span>
+      </a>
+      <a href="https://t.me/relafib" target="_blank">
+        <img src="images/telegram-icon.png" alt="Telegram"><span>t.me/relafib</span>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() { document.querySelector('.main-nav').classList.toggle('open'); }
+    function switchLanguage(lang) {
+      localStorage.setItem('lang', lang);
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.classList.toggle('hidden', el.getAttribute('data-lang') !== lang);
+      });
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      switchLanguage(localStorage.getItem('lang') || 'ru');
+    });
+  </script>
+</body>
+</html>

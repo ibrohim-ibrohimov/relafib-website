@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Relafib - Bitmayotgan yaralarga davo</title>
+  <style>
+    body { margin: 0; font-family: sans-serif; background-color: #f7f7f7; color: #333; }
+    .container { max-width: 480px; margin: auto; padding: 16px; background-color: #fff; box-shadow: 0 0 10px rgba(0,0,0,0.05); border-radius: 8px; }
+    .header-image { width: 100%; border-radius: 8px; margin-bottom: 16px; }
+    h1 { font-size: 22px; color: #118d57; text-align: center; margin: 0 0 12px; }
+    .form-group { margin-bottom: 12px; }
+    label { font-weight: bold; display: block; margin-bottom: 6px; }
+    .phone-group { display: flex; }
+    .phone-prefix { display: inline-block; padding: 10px; background-color: #eee; border: 1px solid #ccc; border-radius: 6px 0 0 6px; font-size: 16px; line-height: 1.5; }
+    input[type="text"], input[type="tel"] { padding: 10px; font-size: 16px; border: 1px solid #ccc; }
+    .phone-group input { flex: 1; border-radius: 0 6px 6px 0; border-top: 1px solid #ccc; border-right: 1px solid #ccc; border-bottom: 1px solid #ccc; border-left: none; }
+    .form-group input { width: 100%; border-radius: 6px; }
+    button { width: 100%; padding: 12px; font-size: 18px; background-color: #118d57; color: white; border: none; border-radius: 6px; cursor: pointer; }
+    button:hover { background-color: #0f7c4c; }
+    .trust { margin-top: 16px; font-size: 14px; color: #555; }
+    .footer { text-align: center; font-size: 12px; color: #aaa; margin-top: 24px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img class="header-image" src="images/Relafib_1600_x_400px.png" alt="Relafib">
+    <h1>Bitmayotgan yaralarga endi davo bor!</h1>
+
+    <form id="leadForm" action="https://script.google.com/macros/s/AKfycbwb8S4tgMU6h3y0x-59bUEvfigccUt1iQNhnKaviXw24YkPmgmfscj4paOhrO1wETez/exec" method="POST">
+      <div class="form-group">
+        <label for="name">Ismingiz</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Telefon raqamingiz</label>
+        <div class="phone-group">
+          <span class="phone-prefix">+998</span>
+          <input type="tel" id="phone" name="phone" placeholder="(90)123-45-67" required pattern="\(\d{2}\)\d{3}-\d{2}-\d{2}">
+        </div>
+      </div>
+      <button type="submit">Bepul maslahatni olish</button>
+    </form>
+
+    <div class="trust">
+      ✔ 1000+ mijozlar foydalangan<br>
+      ✔ Shifokorlar tomonidan tavsiya etilgan<br>
+      ✔ Mahalliy yetkazib berish
+    </div>
+
+    <div class="footer">
+      © 2025 Relafib | Maxfiylik siyosati | Tel: +998 90 000 00 00
+    </div>
+  </div>
+
+  <script>
+    // Format input on the fly
+    document.getElementById('phone').addEventListener('input', function(e) {
+      const x = e.target.value.replace(/\D/g, '').substring(0,9);
+      const p1 = x.substring(0,2);
+      const p2 = x.substring(2,5);
+      const p3 = x.substring(5,7);
+      const p4 = x.substring(7,9);
+      let formatted = '';
+      if (p1) formatted = '(' + p1 + ')';
+      if (p2) formatted += p2;
+      if (p3) formatted += '-' + p3;
+      if (p4) formatted += '-' + p4;
+      e.target.value = formatted;
+    });
+
+    // Submit via AJAX then redirect to Telegram
+    document.getElementById('leadForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const data = new FormData(form);
+      fetch(form.action, { method: 'POST', body: data })
+        .then(res => res.json())
+        .then(() => {
+          // Redirect to Telegram channel
+          window.location.href = 'https://t.me/relafib';
+        })
+        .catch(err => {
+          console.error('Submission error:', err);
+          // On error, still redirect
+          window.location.href = 'https://t.me/relafib';
+        });
+    });
+  </script>
+</body>
+</html>

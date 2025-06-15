@@ -1,42 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 
-<url>
-  <loc>https://relafib.uz/</loc>
-  <lastmod>2025-04-21T08:52:36+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://relafib.uz/index.html</loc>
-  <lastmod>2025-04-21T08:52:36+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://relafib.uz/about.html</loc>
-  <lastmod>2025-04-21T08:52:36+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://relafib.uz/composition.html</loc>
-  <lastmod>2025-04-21T08:52:36+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://relafib.uz/usage.html</loc>
-  <lastmod>2025-04-21T08:52:36+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://relafib.uz/results.html</loc>
-  <lastmod>2025-04-21T08:52:36+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
+  <!-- Index -->
+  <url>
+    <loc>https://relafib.uz/index.html</loc>
+    <lastmod>2025-06-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
 
+  <!-- About -->
+  <url>
+    <loc>https://relafib.uz/about.html</loc>
+    <lastmod>2025-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Composition -->
+  <url>
+    <loc>https://relafib.uz/composition.html</loc>
+    <lastmod>2025-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Usage -->
+  <url>
+    <loc>https://relafib.uz/usage.html</loc>
+    <lastmod>2025-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Results -->
+  <url>
+    <loc>https://relafib.uz/results.html</loc>
+    <lastmod>2025-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- New Landing Page -->
+  <url>
+    <loc>https://relafib.uz/landing</loc>
+    <lastmod>2025-06-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
 
 </urlset>
